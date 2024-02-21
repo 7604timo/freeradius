@@ -1,0 +1,21 @@
+# Add in all your AD groups that determine the dynamic VLANs (Tunnel-Private-Group-Id) here
+
+DEFAULT Ldap-Group == "CN=staff,CN=Users,DC=mydomain,DC=co,DC=uk"                    # EDIT
+        Tunnel-Type = VLAN,                                                          # EDIT
+        Tunnel-Medium-Type = IEEE-802,                                               # EDIT
+        Tunnel-Private-Group-Id = "10"                                               # EDIT
+
+DEFAULT Ldap-Group == "CN=staff_wifi_machines,CN=Users,DC=mydomain,DC=co,DC=uk"      # EDIT
+        Tunnel-Type = VLAN,                                                          # EDIT
+        Tunnel-Medium-Type = IEEE-802,                                               # EDIT
+        Tunnel-Private-Group-Id = "20"                                               # EDIT
+
+DEFAULT Ldap-Group == "CN=students,CN=Users,DC=mydomain,DC=co,DC=uk"                 # EDIT
+        Tunnel-Type = VLAN,                                                          # EDIT
+        Tunnel-Medium-Type = IEEE-802,                                               # EDIT
+        Tunnel-Private-Group-Id = "30"                                               # EDIT
+
+DEFAULT Ldap-Group == "CN=student_wifi_machines,CN=Users,DC=mydomain,DC=co,DC=uk"    # EDIT
+        Tunnel-Type = VLAN,                                                          # EDIT
+        Tunnel-Medium-Type = IEEE-802,                                               # EDIT
+        Tunnel-Private-Group-Id = "40"                                               # EDIT
