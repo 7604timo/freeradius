@@ -1,5 +1,5 @@
 eap {
-	default_eap_type = peap
+	default_eap_type = peap						# EDIT
 	timer_expire = 60
 	ignore_unknown_eap_types = no
 	cisco_accounting_username_bug = no
@@ -12,17 +12,17 @@ eap {
 		auth_type = PAP
 	}
 	tls-config tls-common {
-		private_key_password = myPassword
+		private_key_password = myPassword			# EDIT
 		private_key_file = ${certdir}/server.pem
 		certificate_file = ${certdir}/server.pem
 		ca_file = ${cadir}/ca.pem
-		dh_file = ${certdir}/dh
+		dh_file = ${certdir}/dh					# EDIT
 		ca_path = ${cadir}
-		cipher_list = "PROFILE=SYSTEM"
+		cipher_list = "PROFILE=SYSTEM"				# EDIT
 		cipher_server_preference = no
 		tls_min_version = "1.2"
 		tls_max_version = "1.2"
-		ecdh_curve = "prime256v1"
+		ecdh_curve = "prime256v1"				# EDIT
 		cache {
 			enable = no
 			store {
@@ -44,7 +44,7 @@ eap {
 		tls = tls-common
 		default_eap_type = md5
 		copy_request_to_tunnel = no
-		use_tunneled_reply = yes
+		use_tunneled_reply = yes				# EDIT
 		virtual_server = "inner-tunnel"
 	}
 	peap {
