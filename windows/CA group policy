@@ -1,0 +1,2 @@
+Add your CA to this part of a GP template:
+Computer Configuration > Policies > Windows Settings > Security Settings > Public Key Policies / Trusted Root Certification Authorities
