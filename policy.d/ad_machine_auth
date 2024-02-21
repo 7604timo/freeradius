@@ -1,0 +1,23 @@
+# Windows sends the machine name like this:
+# host/HOSTNAME.mydomain.co.uk
+# We want just the machine name and the realm separately..
+
+ad_computer_username_regexp = '^host\/([-[:alnum:]]+)(\.([-[:alnum:].]*))*$'
+
+ad_computer_username {
+    if (&User-Name && (&User-Name =~ /${policy.ad_computer_username_regexp}/)) {
+        update request {
+            &Stripped-User-Name := "%{1}$"
+        }
+        if ("%{3}" != '') {
+            update request {
+                &Stripped-User-Domain = "%{3}"
+                &realm := "%{3}"
+            }
+        }
+        updated
+    }
+    else {
+        noop
+    }
+}
