@@ -8,4 +8,4 @@ The freeRADIUS config is in ```raddb```, and the Windows group policies are in `
 
 In addition to the freeRADIUS and Windows configs, you also need to make a load of certificates for the radius box to authenticate with the domain controller, which is in ```dc01```
 
-It took me ages to figure it all out, with lots of help from the mailing list, and eventually I got it working and it was great. Then I was told to move to Microsoft's cloud and now it's all rubbish.
+It took me ages to figure it all out, with lots of help from the mailing list, and eventually I got it working and it was great and I hope this documentation helps someone else. Then I was told to move to Microsoft's cloud and now it's all rubbish.
