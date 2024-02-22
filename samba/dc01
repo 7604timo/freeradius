@@ -1,0 +1,2 @@
+# Let SAMBA use ntlm auth with this line in /etc/samba/smb.conf
+ntlm auth = mschapv2-and-ntlmv2-only
