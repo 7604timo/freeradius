@@ -1,5 +1,6 @@
 You need to install ```hostapd``` on your access points and use this config section in your ```/etc/config/wireless``` section:
-```config wifi-iface
+```
+config wifi-iface
         option device 'radio1'
         option mode 'ap'
         option ssid 'Corporate WiFi'
