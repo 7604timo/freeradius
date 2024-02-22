@@ -1,1 +1,1 @@
-#Changes to freeRADIUS config
+# Changes to freeRADIUS config
