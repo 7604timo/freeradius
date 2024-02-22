@@ -1,0 +1,2 @@
+# Make sure raddb is able to use the network:
+firewall-cmd --permanent --add-service=radius
