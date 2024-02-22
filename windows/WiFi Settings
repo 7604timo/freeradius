@@ -1,2 +1,56 @@
+Make a new Group Policy called 'Corporate WiFi' with these settings to allow you to connect your devices to an already-existing WiFi network called 'Corporate WiFi':
+
 Go to Computer Configuration > Windows Settings > Security Settings > Wireless Network (802.11) Policies
-Make a new connection called 'Corporate WiFi' with these settings:
+Make a new connection called 'WiFi Profile' with these settings:
+
+Corporate WiFi
+ > Policy Name > 'WiFi Profile'
+ > Policy Description > 'Machine auth with Certificate'
+ > Policy Type > 'Windows Vista and Later Releases'
+
+Global Settings
+ > Use Windows wireless LAN network services for clients > Enabled
+ > Shared user credentials for network authentication > Enabled
+ > Hosted networks > Enabled
+ > Allow user to view denied networks > Enabled
+ > Allow everyone to create all user profiles > Enabled
+ > Only use Group Policy profiles for allowed networks > Disabled
+
+Network Filters
+ > Prevent connection to infrastructure networks > Disabled
+ > Prevent connection to adhoc networks > Disabled
+ Allowed Networks
+  > Network Name (SSID) > 'Corporate WiFi'
+  > Network Type > 'Infrastructure'
+
+Preferred Network Profiles
+ > Corporate WiFi
+  > Profile Name > 'Corporate WiFi'
+  > Network Type > 'Infrastructure'
+  > Automatically Connect to this network > 'Enabled'
+  > Automatically switch to a more preferred network > 'Enabled'
+  > Network Name (SSID) > 'Corporate WiFi'
+  > Network broadcasts its SSID > 'True'
+  Security Settings
+   > Authentication > WPA2
+   > Encryption > AES
+   > Use 802.1X > Enabled
+   > Pairwise Master Key (PMK) caching > Enabled
+   > PMK Time-To-Live (minutes) > 720
+   > Number of Entries in PMK Cache > 128
+   > Maximum Pre-authentication failures > 3
+  IEEE 802.1X Settings
+   > Computer Authentication > Computer only
+   > Maximum authentication failures > 1
+   Network Authentication Method Properties
+    > Authentication Method > Protected EAP (PEAP)
+    > Validate Server Certificate > Enabled
+    > Connect to these servers > 'RADIUS_HOSTNAME'                            # EDIT - the one specified in the certificate you made on the RADIUS server (not the FQDN)
+    > Trusted Root Certification Authorities > 'CA_FROM_OTHER_GROUP_POLICY'   # EDIT - the one you deployed in the previous group policy (made on the DC)
+    > Do not prompt user to authorize new servers or trusted certification authorities > Disabled
+    > Enable fast reconnect > Enabled
+    > Disconnect if server does not present cryptobinding TLV > Disabled
+    > Enforce Network Access Protection > Disabled
+    Authentication Method Configuration
+     > Authentication Method > Secure Password (EAP-MSCHAP-v2)
+     > Automatically use my Windows logon name and password (and domain if any) > Disabled
