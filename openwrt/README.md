@@ -14,3 +14,12 @@ config wifi-iface
         option vlan_naming '0'
         option isolate '1'
 ```
+
+And make a load of VLAN entries in your ```/etc/config/network``` file, like these:
+```
+config interface 'vlan123'
+        option proto 'static'
+        option type 'bridge'
+        option ifname 'eth0.123'
+        option delegate '0'
+```
