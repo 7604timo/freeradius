@@ -1,4 +1,4 @@
-You need to install ```hostapd``` on your access points and use this config section in your ```/etc/config/wireless``` section:
+You need to install ```hostapd``` on your access points and use this config in your ```/etc/config/wireless``` section:
 ```
 config wifi-iface
         option device 'radio1'
