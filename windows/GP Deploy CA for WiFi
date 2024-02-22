@@ -1,3 +1,4 @@
-#You need to make a CA on your DC, then deploy it to your Windows clients.
+You need to make a CA on your DC, then deploy it to your Windows clients so that they can use it to trust the certificate from the RADIUS server
+
 Add your CA to this part of a GP template:
 Computer Configuration > Policies > Windows Settings > Security Settings > Public Key Policies / Trusted Root Certification Authorities
