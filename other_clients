@@ -1,0 +1,8 @@
+Android / Linux clients will need the CA certificate installed for the WiFi profile, then settings containing these:
+Security: WPA & WPA2 Enterprise
+Authentication: Tunnelled TLS
+Domain: RADIUS.mydomain.co.uk
+CA Certificate: CORPORATE_CA
+Inner Authentication: PAP
+Username: my_ad_username
+Password: my_ad_password
