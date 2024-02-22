@@ -1,5 +1,4 @@
-# freeradius
-Windows AD and FreeRADIUS
+#Windows Clients, SAMBA AD and FreeRADIUS
 
 This is a copy of the configs I used to get Windows 10/11 clients on a SAMBA AD to use machine authentication for WiFi, and also allow users to authenticate with their AD credentials on a Rocky Linux box.
 
